@@ -25,14 +25,14 @@
             </BarChart>
             <HBox alignment="CENTER" prefHeight="37.0" prefWidth="600.0" spacing="25.0">
                <children>
-                  <RadioButton fx:id="goldMedalRB" mnemonicParsing="false" selected="true" text="Gold Medals">
+                  <RadioButton fx:id="goldMedalRB" mnemonicParsing="false" onAction="#changed" selected="true" text="Gold Medals">
                      <toggleGroup>
                         <ToggleGroup fx:id="graphControls" />
                      </toggleGroup>
                   </RadioButton>
-                  <RadioButton fx:id="silverMedalRB" mnemonicParsing="false" text="Silver Medals" toggleGroup="$graphControls" />
-                  <RadioButton fx:id="bronzeMedalRB" mnemonicParsing="false" text="Bronze Medals" toggleGroup="$graphControls" />
-                  <RadioButton fx:id="totalMedalsRB" mnemonicParsing="false" text="Total Medals" toggleGroup="$graphControls" />
+                  <RadioButton fx:id="silverMedalRB" mnemonicParsing="false" onAction="#changed" text="Silver Medals" toggleGroup="$graphControls" />
+                  <RadioButton fx:id="bronzeMedalRB" mnemonicParsing="false" onAction="#changed" text="Bronze Medals" toggleGroup="$graphControls" />
+                  <RadioButton fx:id="totalMedalsRB" mnemonicParsing="false" onAction="#changed" text="Total Medals" toggleGroup="$graphControls" />
                </children>
                <VBox.margin>
                   <Insets />

@@ -59,8 +59,7 @@ public class MedalsByCountryController implements Initializable {
     }
 
     @FXML
-    public void changed(ObservableValue<? extends Toggle> observed,
-                        Toggle oldValue, Toggle newValue) {
+    public void changed() {
 
         RadioButton radioButton = (RadioButton) graphControls.getSelectedToggle();
 
@@ -82,11 +81,6 @@ public class MedalsByCountryController implements Initializable {
             barChart.setTitle("Olympic Total Medals");
         }
     }
-
-//    @FXML
-//    private void changeToCreatorView(ActionEvent event) throws IOException {
-//        SceneChanger.changeScenes(event,"HandSanitizerBottleCreatorView.fxml","Create a Bottle");
-//    }
 
     @FXML
     public void changeScenes(ActionEvent event) throws IOException {
