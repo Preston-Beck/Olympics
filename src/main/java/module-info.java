@@ -11,4 +11,5 @@ module medals.olympics {
     exports medals.olympics;
     exports Controllers;
     opens Controllers to javafx.fxml;
+    opens Models to javafx.base;
 }

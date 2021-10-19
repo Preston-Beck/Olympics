@@ -108,4 +108,39 @@ public class DBUtilities {
 
         return totalMedalData;
     }
+
+    public static ArrayList<Country> getCountry()
+    {
+        ArrayList<Country> countries = new ArrayList<>();
+
+        String sql ="SELECT countryID, country, goldMedals, silverMedals, bronzeMedals, totalMedals, population " +
+                "FROM olympics GROUP BY country ORDER BY totalMedals DESC;";
+
+        try(
+                Connection connection = DriverManager.getConnection(connectURL, username, password);
+                Statement statement = connection.createStatement();
+                ResultSet resultSet = statement.executeQuery(sql);
+        )
+        {
+            while (resultSet.next())
+            {
+                int countryID = resultSet.getInt("countryID");
+                String country = resultSet.getString("country");
+                int goldMedals = resultSet.getInt("goldMedals");
+                int silverMedals = resultSet.getInt("silverMedals");
+                int bronzeMedals = resultSet.getInt("bronzeMedals");
+                int totalMedals = resultSet.getInt("totalMedals");
+                int population = resultSet.getInt("population");
+
+                Country newCountry = new Country(country,goldMedals,silverMedals,bronzeMedals,totalMedals,population);
+                newCountry.setCountryID(countryID);
+                countries.add(newCountry);
+            }
+        }catch(Exception e)
+        {
+            e.printStackTrace();
+        }
+
+        return countries;
+    }
 }

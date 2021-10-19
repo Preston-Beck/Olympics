@@ -73,10 +73,10 @@ public class Country {
     }
 
     public void setPopulation(int population) {
-        if(population >= 500)
+        if(population >= 1)
             this.population = population;
         else
-            throw new IllegalArgumentException("Population must be at least 500.");
+            throw new IllegalArgumentException("Population must be at least 1.");
     }
 
     public String getCountryName() {
