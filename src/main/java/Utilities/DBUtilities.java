@@ -109,6 +109,7 @@ public class DBUtilities {
         return totalMedalData;
     }
 
+    //Function to populate table view with Country objects
     public static ArrayList<Country> getCountry()
     {
         ArrayList<Country> countries = new ArrayList<>();

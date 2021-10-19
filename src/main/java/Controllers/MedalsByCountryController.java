@@ -49,6 +49,7 @@ public class MedalsByCountryController implements Initializable {
     private RadioButton totalMedalsRB;
 
     @Override
+    //When scene launches, gold medals chart is defaulted to
     public void initialize(URL url, ResourceBundle resourceBundle) {
         //Get chart data by calling the getGoldMedalsByCountry function
         barChart.getData().addAll(DBUtilities.getGoldMedalsByCountry());
@@ -59,10 +60,10 @@ public class MedalsByCountryController implements Initializable {
     }
 
     @FXML
-    public void changed() {
-
+    public void changed(){
+    //Function to update chart data when selected radio button changes
         RadioButton radioButton = (RadioButton) graphControls.getSelectedToggle();
-
+//        barChart.getData().clear();
         if (radioButton == goldMedalRB) {
             barChart.getData().addAll(DBUtilities.getGoldMedalsByCountry());
             //Change title for chart

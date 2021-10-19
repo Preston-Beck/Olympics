@@ -1,0 +1,13 @@
+.root {
+    -fxbackground-color: #00796B;
+    -fx-text-fill: #FFFFFF;
+    font-family: Elephant;
+}
+
+.chart-title {
+    -fx-text-fill: #212121;
+}
+
+.axis-label {
+    -fx-text-fill: #757575;
+}
