@@ -9,6 +9,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.image.Image;
 import javafx.stage.Stage;
 import medals.olympics.MedalsApplication;
 import javafx.fxml.FXML;
@@ -17,6 +18,7 @@ import javafx.scene.control.TableView;
 
 import java.io.IOException;
 import java.net.URL;
+import java.util.Objects;
 import java.util.ResourceBundle;
 
 public class MedalsTableController implements Initializable {

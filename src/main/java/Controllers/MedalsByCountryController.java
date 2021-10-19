@@ -14,12 +14,14 @@ import javafx.scene.chart.NumberAxis;
 import javafx.scene.control.RadioButton;
 import javafx.scene.control.Toggle;
 import javafx.scene.control.ToggleGroup;
+import javafx.scene.image.Image;
 import javafx.stage.Stage;
 import medals.olympics.MedalsApplication;
 import org.controlsfx.control.action.Action;
 
 import java.io.IOException;
 import java.net.URL;
+import java.util.Objects;
 import java.util.ResourceBundle;
 
 public class MedalsByCountryController implements Initializable {
